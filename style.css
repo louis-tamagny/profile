@@ -58,6 +58,14 @@ a {
   justify-content: space-evenly;
 }
 
+@media screen and (max-width: 600px) {
+  .centered-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+
 .centered-list div {
   text-align: center;
   align-content: center;
