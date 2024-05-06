@@ -68,7 +68,6 @@ a {
 
 .centered-list div {
   text-align: center;
-  align-content: center;
   flex: 1 1 0;
 }
 
@@ -83,5 +82,5 @@ a {
 .img-circle {
   border-radius: 50%;
   border: 1px solid #37393A;
-
+  vertical-align: center;
 }
