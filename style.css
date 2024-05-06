@@ -68,6 +68,7 @@ a {
 
 .centered-list div {
   text-align: center;
+  align-items: center;
   flex: 1 1 0;
 }
 
