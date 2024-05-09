@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Poppins:wght@300;400;500;700");
 
+* {
+  /* outline: 1px solid red; */
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Open Sans', sans-serif;  background-color: #C7D3DD;
@@ -10,12 +14,17 @@ body {
 .container {
   margin: 5vh auto;
   width: 90vw;
+  padding: 1rem;
 }
 
 @media screen and (min-width: 1200px) {
   .container {
     width: 1080px;
   }
+}
+
+.container > div {
+  margin: 1rem;
 }
 
 h1, h2, h3 {
@@ -29,7 +38,6 @@ h1, h2, h3 {
   color: #37393A;
   border: 1px solid #37393A;
   box-shadow: 3px 3px 5px black;
-  margin: 1em;
   padding: 1em;
   transition: 0.3s ease;
 }
@@ -54,22 +62,30 @@ a {
 }
 
 .centered-list {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 992px) {
   .centered-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .centered-list {
+    grid-template-columns: 1fr;
   }
 }
 
 .centered-list div {
-  text-align: center;
-  align-content: center;
-  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .centered-list a:hover {
@@ -77,11 +93,30 @@ a {
  }
 
 .icon {
-  font-size: 100px;
+  font-size: 5rem;
 }
 
 .img-circle {
   border-radius: 50%;
   border: 1px solid #37393A;
   vertical-align: center;
+}
+
+.centered-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-header h2 {
+  font-size: 2rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-evenly;
+  align-items: center;
 }
